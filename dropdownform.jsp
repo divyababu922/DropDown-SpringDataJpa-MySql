@@ -9,15 +9,13 @@
 </head>
 <body>
     <div align="center">
-        <h2>DROP DOWN Users</h2>
-        <form:form id="dropdownuser" action="dropdownuser" method="post">
-             
-            <form:label>Select Users</form:label>
-            <form:select multiple=true path="name" items="${customer.name}" /><br/>
-                 
-            <form:button>Submit</form:button>
-        </form:form>
-        
+        <h2>USERS DROP DOWN</h2>
+        <form id="dropdownform1" name="dropdownform1" method="get" action="register_success">
+            <form:select name="users" multiple="true" path="users">
+                <form:options items="${message}"></form:options>   
+            </form:select>
+            <p><input type="submit" value="submit"></p>
+        </form>   
     </div>
 </body>
 </html>
